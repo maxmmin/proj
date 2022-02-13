@@ -1,8 +1,9 @@
-
+import React from "react";
+import s from './navpanel.module.scss'
 
 function Navpanel() {
   return (
-    <nav className="Navpanel">
+    <nav className={s.nav}>
       
     </nav>
   );
