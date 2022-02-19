@@ -4,4 +4,60 @@
     background: #25272A;
     mix-blend-mode: normal;
     opacity: 0.75;
+    padding-top: 35.5px;
+    
+}
+
+.navhead {
+    min-height: 71px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    padding: 0px 24px 0px 26px;
+}
+
+.settings {
+    justify-self: end;
+    margin-top: 4px;
+    
+}
+
+.listActive {
+    font-size: 1.428em;
+    color: #FFFFFF;
+    font-weight: 700;
+    
+}
+
+
+.allThreads {
+    font-size: 1em;
+    color: #B5B5B5; 
+    align-self: flex-end;
+
+}
+
+.allThreads::before {
+    
+        content: '';
+        display: inline-block;
+        background: url(img/allBefore.svg);
+        width: 16px;    
+        height: 17px;
+        position: relative;
+        top: 4px;
+        margin-right: 11px;
+    
+}
+
+
+.listActive::after {
+    content: '';
+    display: inline-block;
+    background: url(img/nomadlAfter.svg);
+    width: 10px;    
+    height: 7px;
+    position: relative;
+    top: -3px;
+    margin-left: 5px;
 }

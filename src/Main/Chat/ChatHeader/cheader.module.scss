@@ -1,6 +1,106 @@
 .header {
     width: 100%;
-    height: 81px;
-    padding-top: 31.5px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+    height: 49px;
+    margin-top: 31.5px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 23.5px;
+    padding-right: 23.5px;
 }
+
+.currentChatDiv {
+    display: flex;
+    align-items: center;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+}
+
+.currentChat {
+    font-size: 1.42em;
+    
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.savedState {
+    margin-left: 5.5px;
+}
+
+.currentOnline {
+    font-size: 1em;
+    text-align: right;
+
+    color: #A4A4A4;
+    display: flex;
+    align-items: center;
+}
+
+.currentOnline::before {
+    content: url(img/peopleIc.svg);
+    display: inline-block;
+    margin-right: 6px;
+    width: 10.5px;
+}
+
+.searchDiv {
+    margin-left: 24px;
+    flex-basis: 241px;
+    height: 33px;
+    background: rgba(0, 0, 0, 0.0001);
+    border: 0.5px solid rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-right: 15.5px;
+}
+
+.searchButton {
+    width: 15.5px;
+    height: 15.5px;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    
+}
+
+.searchIco {
+    width: 100%;
+    height: 100%;
+}
+
+.searchInp {
+    border: none;
+    outline: none;
+    font-family: Lato;
+    color: #8D8D8D;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 16.5px;
+    max-width: 200px;
+    width: 100%;
+}
+
+
+.notifications {
+    min-width: 14.5px;
+    height: 15.5px;
+    margin-left: 23px;
+    flex-shrink: 0;
+}
+
+.menu {
+    margin-left: 22px;
+    flex-shrink: 0;
+}
+

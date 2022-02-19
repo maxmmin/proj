@@ -1,5 +1,71 @@
-.sendDiv {
+
+
+.bottomDiv {
     width: 100%;
     height: 73.5px;
-    border-top: 2px solid rgba(0, 0, 0, 0.24);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.24);
+    display: flex;
+    align-items: center;
+    padding: 0 23px;
+    max-width: 100%;
+    
+    
+}
+
+
+.messageArea {    
+  
+    border: none;
+    outline: none;
+    line-height: 130%;
+
+    overflow-wrap: break-word;
+    
+    unicode-bidi: isolate;
+    white-space: nowrap;
+    scrollbar-width: none;
+    overflow: auto;
+    overflow: overlay;
+    color: #060607;
+    font-size: 1em;
+    resize: none;
+
+    width: 100%;
+    
+    
+}
+
+.messageArea::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .messageArea {
+    -ms-overflow-style: none;
+  }
+
+.messageCont {
+    width: 100%;
+    
+    margin-left: 20.5px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+    padding: 10px;
+    display: flex;
+    border-radius: 15px;
+    background: rgba(black,0.1);
+    
+    
+    
+}
+
+
+
+.voice {
+    margin-left: 18.5px;
+}
+
+.send {
+    margin-left: 20.5px;
 }
