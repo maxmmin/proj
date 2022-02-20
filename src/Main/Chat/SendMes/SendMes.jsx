@@ -6,7 +6,11 @@ import send from './img/send.svg'
 
 function SendMes () {
     
-   
+    function handleKey (event) {
+        if (!event.shiftKey && event.which === 13) {
+            event.preventDefault()
+    }
+}
         
             
     return (
@@ -16,7 +20,7 @@ function SendMes () {
             <img src={voice} alt="" className={s.voice} />
 
             <div className={s.messageCont}>
-               <div className={s.messageArea}   contentEditable='true' dir="auto"></div>
+               <div className={s.messageArea} onKeyPress={handleKey}   contentEditable='true' dir="auto"></div>
             </div>
 
 

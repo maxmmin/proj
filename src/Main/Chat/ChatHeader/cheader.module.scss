@@ -36,7 +36,7 @@
 .currentOnline {
     font-size: 1em;
     text-align: right;
-
+    font-weight: 400;
     color: #A4A4A4;
     display: flex;
     align-items: center;
@@ -89,6 +89,8 @@
     padding-left: 16.5px;
     max-width: 200px;
     width: 100%;
+    background: transparent;
+    font-weight: 400;
 }
 
 

@@ -8,8 +8,8 @@ function Main () {
     return (
         <main className={s.content}>
          <Routes>
-                <Route path="/proj" element={<Chat/>}></Route>
-                <Route path="/proj/settings" element={<Settings/>}></Route>
+                <Route exact path="/proj" element={<Chat/>}></Route>
+                <Route exact path="/proj/settings" element={<Settings/>}></Route>
          </Routes> 
 
         </main>

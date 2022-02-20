@@ -1,5 +1,55 @@
 .settingsCont {
     width: 100%;
     height: 100%;
-    background: lightgray;
+
+    padding-top: 50px;
+    }
+
+
+
+
+.profile {
+    min-height: 400px;
+   
+    width: 100%;
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: lightcyan;
+            border: 1px solid gray;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .userName {
+            font-size: 2em;
+            font-weight: 500;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+        }
+
+        .tagName {
+            font-size: 1.5em;
+            color: gray;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            border: 1px solid gray;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 8px;
+            width: 80%;
+            min-height: 200px;
+            margin-top: 40px;
+            padding: 10px;
+        }
 }

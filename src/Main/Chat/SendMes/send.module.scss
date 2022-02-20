@@ -17,8 +17,9 @@
   
     border: none;
     outline: none;
-    line-height: 130%;
-
+    line-height: 20px;
+    position: relative;
+    top: -2px;
     overflow-wrap: break-word;
     
     unicode-bidi: isolate;
