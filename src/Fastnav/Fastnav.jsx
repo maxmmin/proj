@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import s from './fastnav.module.scss'
 import addIc from './img/addic.svg'
+import PopMenu from './components/PopMenu'
+import {CSSTransition} from 'react-transition-group'
 
 function Fastnav () {
 
-    const [choice, setChoice] = useState()
+        const [isMenuActive, setMenuActive] = useState(false)
+        
     
-
-    useEffect(()=> {
-        console.log('rendered '  + choice)
-    }, [choice])
     return (
-        <nav className={s.nav}>
-            <div className={s.addCont}>
+        <nav className={s.nav} style={{userSelect: 'none'}}>
+
+            <div className={isMenuActive?`${s.addCont} ${s.addContActive}`:s.addCont}  onClick={()=>setMenuActive((prev)=>{return !prev})}>
                 <img src={addIc} alt="" className={s.addIco} />
+                < PopMenu isActive={isMenuActive}/>
+                
             </div>
 
-            <h5>Choice: {choice}</h5>
-            <button onClick={()=>setChoice(1)}>1</button><button onClick={()=>setChoice(2)}>2</button><button onClick={()=>setChoice(3)}>3</button>
+            
+
+
         </nav>
     )
 }

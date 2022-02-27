@@ -13,6 +13,7 @@
 }
 
 
+
 .messageArea {    
   
     border: none;
@@ -27,17 +28,21 @@
     scrollbar-width: none;
     overflow: auto;
     overflow: overlay;
-    color: #060607;
+    color: #060607 !important;
     font-size: 1em;
     resize: none;
 
     width: 100%;
-    
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
     
 }
 
 .messageArea::-webkit-scrollbar {
     width: 0;
+    height: 0;
   }
 
   .messageArea {

@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from './navpanel.module.scss';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import noMadAFter from "./img/nomadlAfter.svg"
 
 
-var counter = 0
+
 
 function Navpanel() {
 
-  const [settingState, setSettingState] = useState('/proj')
   
+  const [settingState, setSettingState] = useState(useLocation().pathname)
   
+  const init = useEffect(() => {
+    if(settingState==='/proj') {
+      return 0
+    }
 
-  function clickSetting () {
-    setSettingState(counter?'/proj/settings':'/proj')
-    counter=counter?0:1
+    else if (settingState==='/proj/settings') {
+      return 1
+    }
+  },[])
+
+  const [counter, setCounter] = useState(init)
+  
+ useEffect(() => {
+  setSettingState(counter?'/proj':'/proj/settings')
+  
+ }, [counter])
+
+  function clickSetting () {    
+    setCounter((prev)=>prev?0:1)
   }
 
   return (

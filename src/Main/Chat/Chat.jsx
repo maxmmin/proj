@@ -5,6 +5,9 @@ import ChatWindow from "./ChatWindow/ChatWindow";
 import SendMes from "./SendMes/SendMes";
 
 function Chat () {
+
+    
+
     return (
         <div className={s.chat}>
             <ChatHeader/>
