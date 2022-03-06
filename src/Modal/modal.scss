@@ -1,0 +1,127 @@
+@keyframes friendAnim {
+    0% {
+        left: -100px;
+        opacity: 0;
+        
+    }
+
+    100% {
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+
+.addFriendAnim {
+    bottom: 90px;
+    left: 10px;
+    position: absolute;
+    overflow: hidden;
+    animation-name: friendAnim;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.modalWindow {
+   
+    width: 300px;
+    height: 100px;
+    background: #3b444b;
+    border: 1.5px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+
+
+.friendIDcont {
+    width: 240px;
+    border-radius: 8px;
+    position: relative;
+    background: #00AB78;
+    margin-top: 6px;
+    
+    
+}
+
+
+.friendIDcont::before {
+    content: "Enter your friend's ID";
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 200;
+    padding-left: 3px;
+    width: 240px;
+    pointer-events: none;
+    top: -16px;
+    color: white;
+}
+
+.friendID {
+    vertical-align: top;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    height: 35px;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 0px 15px;
+    color: #3b444b;
+    caret-color: #3b444b;
+}
+
+.friendID:focus {
+    border: none;
+    outline: none;
+}
+
+.addFriendButton {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    
+    margin-left: 2px;
+    height: 100%;
+    position: relative;
+}
+
+.addFriendButton::before {
+    content: '';
+    transform: rotateZ(90deg);
+    display: block;
+    width: 50%;
+    background: white;
+    height: 4px;
+    border-radius: 8px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.addFriendButton::after {
+    content: '';
+    display: block;
+    width: 50%;
+    background: white;
+    height: 4px;
+    border-radius: 8px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+// animations
+
+
+
+

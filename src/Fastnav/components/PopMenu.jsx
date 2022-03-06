@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import addContIc from '../img/addCont.png'
 import addChatIc from '../img/addChat.png'
-import { CSSTransition } from 'react-transition-group';
 import './PopupAnim.scss'
+import { useModal } from "../../Modal/modalContext";
+
 
 
 export default function PopMenu ({isActive}) {
 
-    function ActionItemDiv ({imgSrc, imgStyle}) {
+    const popRef = useRef()
+
+    function ActionItemDiv ({imgSrc, imgStyle, onClick}) {
         return (
-        <div className="itemActionBlock" onClick={(e)=>{e.stopPropagation();console.log('clicked')}} style={{
+        <div className="itemActionBlock" onClick={onClick} style={{
             width: '41.5px',
             height: '41.5px',
             borderRadius: '50%',
@@ -20,16 +23,17 @@ export default function PopMenu ({isActive}) {
 
             
         }}>
-            <img src={imgSrc} alt=""  className="addContact"  style={imgStyle}/>
+            <img src={imgSrc} alt=""  className="addContact" style={imgStyle}/>
         </div>
         )
     } 
 
+    const modal = useModal()
 
     
     return (
         
-        <div className={isActive?'popMenu active':'popMenu'} style={
+        <div ref={popRef} className={isActive?'popMenu active':'popMenu'} style={
             {
                 width: '100%',
                 height: '95px',
@@ -42,22 +46,36 @@ export default function PopMenu ({isActive}) {
                 cursor: 'default'
                 
             }
-        }>
+        }
+        
+        onClick={(e)=>e.stopPropagation()}
+        >
 
-            < ActionItemDiv imgSrc={addContIc}  imgStyle={{
+            < ActionItemDiv imgSrc={addContIc}
+              imgStyle={{
                 width: '20px',
                 opacity: '0.5',
                 paddingBottom: '3px',
                 
                 
-            }} />
+            }} 
+            onClick={(e)=>{e.stopPropagation(); popRef.current.classList.remove('active'); modal.setModalState((prev)=>{
+                var x = {}; for (var k in prev) {x[k]=prev[k]; x.isShown = !x.isShown; x.mode=1; return x}
+            })}}
+            />
 
             < ActionItemDiv imgSrc={addChatIc}  imgStyle={{
                             width: '20px',
                             opacity: '0.5',
                             paddingBottom: '3px'
                             
-                        }} />
+            }} 
+            
+            onClick={(e)=>{e.stopPropagation(); popRef.current.classList.remove('active'); modal.setModalState((prev)=>{
+                var x = {}; for (var k in prev) {x[k]=prev[k]; x.isShown = !x.isShown; x.mode=2; return x}
+            })}}
+
+            />
             
             
             </div>

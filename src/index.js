@@ -7,16 +7,21 @@ import Fastnav from './Fastnav/Fastnav';
 import Main from './Main/Main';
 import Aside from './AddAside/AddAside';
 import { BrowserRouter } from 'react-router-dom';
+import Modal from './Modal/modal';
+import {useModal, ModalProvider} from './Modal/modalContext'
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <ModalProvider>
     <Fastnav />
     <Navpanel />
     <Main />
     <Aside />
+    <Modal />
+    </ModalProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.querySelector('.wrapper')
